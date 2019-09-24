@@ -1,0 +1,13 @@
+/* this a comment */
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* html element selector */
+h1 {
+    /* property: value; */
+    text-transform: uppercase;
+    color: turquoise ;
+}
