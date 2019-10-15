@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../styles/Class3and4_Responsiveness_JS.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <title>Sandra Case</title>
+</head>
+
+<body id="body">
+    <div id="main-content">
+        <img id="dog-photo" name="dog-photo" src="../images/dog.jpg" alt="silly dog picture" />
+        <!-- <img id="dog-photo" name="cat-photo" src="../images/cat.jpg" alt="silly cat picture" /> -->
+        <div id="text">
+            <h1 id="name"> Sandra Case </h1>
+            <p id="description">
+                I record, edit and mix audio for projects ranging from film, commercials and documentaries to lectures, audio books, and dialog for educational platforms. I also sound design and restore audio for projects
+            </p>
+            <a target="_blank" href="https://www.soundcloud.com">
+                SoundCloud
+            </a>
+            <a target="_blank" href="https://www.linkedin.com">
+                LinkedIn
+            </a>
+            <a target="_blank" href="https://www.instagram.com">
+                Instagram
+            </a>
+        </div>
+    </div>
+</body>
+
+<!-- bad practice to have JS in HTML file, will be moved soon! -->
+<script type="text/javascript">
+    // variables store values
+    // let element; or var element; to declare variables
+
+    // "document" presents the HTML document in the browser 
+    var description = document.getElementById("description"); 
+    // write into browser javascript console
+    console.log(description);
+
+    // var descriptionBgColor = description.style.backgroundColor;
+
+    // addEventListener("event", whatToDo)
+    description.addEventListener("click", clickHandler);
+    description.addEventListener("mouseover", hoverHandler);
+    description.addEventListener("mouseout", unhoverHandler);
+
+    function clickHandler(){
+        description.textContent = "Updated Content!";
+        console.log("clicked");
+    }
+
+    function hoverHandler(){
+        //  change style
+        description.style.color = "lightblue";
+    }
+
+    function unhoverHandler(){
+        description.style.color = "unset";
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
