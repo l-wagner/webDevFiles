@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page!</title>
+</head>
+<body>
+    <p id="body-content" onClick="onClickHandler()">My content.</p>
+
+</body>
+<script>
+    function onClickHandler() {
+        let element = document.getElementById("body-content");
+        element.innerHTML = "My updated content!";
+    }
+</script>
+</html>

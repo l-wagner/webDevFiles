@@ -1,0 +1,87 @@
+@keyframes bounce-5 {
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+    /*10% {
+        transform: scale(1.1, 0.9) translateY(0);
+    }*/
+    30% {
+        transform: scale(0.9, 1.1) translateY(-3em);
+    }
+    50% {
+        transform: scale(1, 1) translateY(0);
+    }
+    57% {
+        transform: scale(1, 1) translateY(-0.3em);
+    }
+    64% {
+        transform: scale(1, 1) translateY(0);
+    }
+    100% {
+        transform: scale(1, 1) translateY(0);
+    }
+}
+
+title {
+    font-size: 28px;
+    color: turquoise;
+}
+
+body {
+    font-size: 16px;
+    color: black;
+    display: grid;
+    grid-template-areas: "header" "navigation";
+    grid-row-gap: 4em;
+    align-items: center;
+    justify-items: center;
+
+    background-image: url(../images/mariobg.png);
+    background-size: 100% 100%;
+    font-family: "Press Start 2P", cursive;
+}
+
+header {
+    text-align: center;
+    color: white;
+    width: 100vw;
+    text-shadow: 5px 1px 0px #000;
+    /*position: absolute;*/
+    /*top: 15%;*/
+    /*bottom: 50%;*/
+    font-size: 1.5em;
+    margin: 5em auto 0 auto;
+    grid-area: header;
+}
+
+.navigation {
+    grid-area: navigation;
+    grid-column-gap: 2em;
+    display: grid;
+    grid-template-areas: "box1 box2 box3";
+}
+
+.block {
+    background-image: url(../images/block.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-size: 50% 50%;
+    width: 7em;
+    height: 7em;
+
+    /*transition: all .3s;*/
+}
+
+
+.block:hover {
+    cursor: pointer;
+    /*transform: translateY(-1em);*/
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.bounce-5 {
+    animation-name: bounce-5;
+    animation-timing-function: ease;
+}

@@ -1,0 +1,116 @@
+body {
+    font-size: 16px;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Lato", sans-serif;
+
+    background-size: 100% 100%;
+    background: linear-gradient(
+        to top right,
+        rgb(198, 255, 221),
+        rgb(251, 215, 134),
+        rgb(247, 148, 143) /*rgb(244, 161, 157)*/
+    );
+}
+
+.card {
+    
+    width: 60vw;
+    height: 50vh;
+
+    background-color: #424242;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 5px white solid;
+    /*proceed with caution*/
+    box-shadow: 13px 21px 200px 0px rgba(0, 0, 0, 0.43);
+}
+.image {
+    /*make it fit in parent div*/
+    height: 50vh;
+    object-fit: contain;
+    display: inline-block;
+    float: left;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.content {
+    grid-area: content;
+    padding: 2em;
+}
+
+.title {
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+.bio {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+a {
+    color: white;
+}
+
+@media (min-width: 1200) and (max-width: 1400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1199px) {
+    body {
+        background: linear-gradient(
+            to top,
+            rgb(198, 255, 221),
+            rgb(251, 215, 134),
+            rgb(247, 148, 143)
+        );
+        background-attachment: fixed;
+    }
+    .card {
+        width: 60vw;
+        text-align: center;
+        height: auto;
+        grid-template-areas: "image" "content";
+        grid-rows: ".4fr .6fr";
+    }
+    .image {
+        /*make it fit in parent div*/
+        width: 100%;
+        object-fit: cover;
+        object-position: 0 26%;
+        grid-area: image;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+}
+
+/* style by element */
+div {
+    /* size by viewport dimensions */
+    width: 100vw;
+    height: 100vh;
+}
+
+/* style by id */
+#watermelon {
+    font-size: 16px;
+}
+
+/* style by class */
+.watermelon {
+    background-color: green;
+}
+
+/* list of selectors */
+h1,
+h2,
+h3 {
+    /* whitespace around an element */
+    margin: 5px;
+}

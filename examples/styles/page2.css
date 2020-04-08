@@ -1,0 +1,125 @@
+body {
+    font-size: 16px;
+    color: white;
+    display: grid;
+    grid-template-areas: "header" "navigation";
+    grid-row-gap: 4em;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    /*background-image: url(../images/wedding.jpg);*/
+    background-size: 100% 100%;
+    font-family: "Lobster Two", cursive;
+    height: 100vh;
+    width: 100vw;
+    text-shadow: 0.2px 1px 0px #000;
+
+    overflow: hidden;
+}
+
+.content {
+    /*display: grid;*/
+    /*grid-template-areas: "slogan" "bookings" "footer";*/
+}
+
+.slogan {
+    padding-top: 30%;
+    grid-area: slogan;
+    letter-spacing: 10px;
+
+    font-size: 2em;
+    z-index: -30;
+    font-family: "Montserrat";
+    /*text-shadow: 0.2px 1px 0px #000;*/
+    color: rgba(255, 255, 255, 0.8);
+    /*margin: 0 auto;
+    width: 50vw;
+
+    position: absolute;
+    top: 50%;*/
+    /*left: 50%;*/
+}
+
+/* Basic background image styling. */
+.background-image {
+    /*position: absolute;
+    top: 50%;
+    left: 50%;*/
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background-image h3 {
+    padding: 3.5em;
+    padding-top: 25%;
+    z-index: 10;
+    font-size: 4em;
+    font-family: "Lobster";
+}
+
+/* Styles for the alternating / transition effect. */
+.toggle-image {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /*height: 800px;*/
+    transition: opacity 1s ease-in-out;
+}
+
+/* Styles for the specific images. */
+.first-image {
+    background-image: url("../images/wedding1.jpg");
+    z-index: -4;
+    opacity: 0;
+}
+
+.second-image {
+    background-image: url("../images/performances.jpg");
+    z-index: -3;
+    opacity: 0;
+}
+
+.third-image {
+    background-image: url("../images/influencers.jpg");
+    z-index: -2;
+    opacity: 0;
+}
+
+/*.fourth-image {
+    background-image: url('../images/cats.jpg');
+    z-index: -1;
+    opacity: 0;
+}*/
+
+.first-image.show {
+    opacity: 1;
+}
+
+.second-image.show {
+    opacity: 1;
+}
+
+.third-image.show {
+    opacity: 1;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+a {
+    border-top: 3px solid white;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+}
