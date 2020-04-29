@@ -1,6 +1,31 @@
-/* dark-blue: 	#37474F*/
+ /*dark-blue: 	#37474F*/
 /* gray: 		#E0E0E0*/
 /* yellow:		#FFD966*/
+
+
+
+.parent{
+	display: grid;
+	grid-template-areas: 
+		"image description" 
+		"address events";
+	grid-template-columns: .6fr .4fr;
+}
+img{
+	grid-area: image;
+}
+.description{
+	grid-template-columns: description;
+}
+.address{
+	grid-area: address;
+}
+.events{
+	grid-area: events;
+}
+
+
+
 
 body{
 	background-color: #37474F;
@@ -24,6 +49,8 @@ body{
 	grid-row-gap: 3em;
 }
 
+
+
 .hero {
 	background-color: #E0E0E0;
 	/*height: 100vh;*/
@@ -43,23 +70,13 @@ body{
 
 	align-items: center;
 
-
-
-
-
 	/*grid-template-areas: "image" "description";*/
 
 	grid-template-areas: "image description";
 
 
-	grid-template-columns: 30% 70%;
+	grid-template-columns: .4fr .6fr;
 
-
-
-
-
-
-	/*padding: 2em;*/
 
 }
 
@@ -83,7 +100,7 @@ body{
     /*object-position: 10% 5%;*/
 
    
-    /*object-position: 50% 0%;*/
+    object-position: 95% 0%;
 
    
     /*object-position: 100% 0%;*/
@@ -107,15 +124,47 @@ body{
 
 
 .javascript {
+	/* same as hero*/
 	width: 60vw;
 	
 	display: grid;
-	grid-template-columns: 50% 50%;
+	grid-template-columns: .5fr .5fr;
 	grid-template-areas: "fortune" "form";
 
 
 }
 
+.javascript .fortune {
+	background-color: white;
+	border-radius: 10px;
+    border: 5px white solid;
+
+    /* dev purposes only*/
+    /*height: 300px;*/
+
+    /*SNEAKY CENTERING*/
+    text-align: center;
+
+
+}
+
+.fortune img{
+	height: 300px;
+	cursor: pointer;
+	
+}
+
+.javascript .form {
+	background-color: #E0E0E0;
+	border-radius: 10px;
+    border: 5px white solid;
+
+    /* dev purposes only*/
+    height: 300px;
+}
+
+
+/*
 .javascript .fortune {
 	height: 300px;
 	background-color: #FFD966;
@@ -124,13 +173,13 @@ body{
 }
 
 
-.javascript .fortune.two{
+.javascript .form{
 	height: 300px;
 	background-color: #E0E0E0;
 	border-radius: 10px;
     border: 5px white solid;z
 }
-
+*/
 
 
 
@@ -169,4 +218,4 @@ body{
 min-width: 480px	Mobile-landscape (and larger)
 min-width: 768px	Tablet-portrait (and larger)
 min-width: 992px	Tablet-landscape (and larger)
-min-width: 1200px	Laptops (and langer)*/
+min-width: 1200px	Laptops (and langer)
